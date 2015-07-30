@@ -1,22 +1,26 @@
-alias ll='ls -l'
-alias l='ls -la'
-alias ..='cd ..'
+export CLICOLOR=1
+export SVN_EDITOR=vim
 
-PS1="\h:\w \$"
+#shell command alias, no space before and after '='
+alias ll="ls -l"
+alias l="ls -l"
+alias la="ls -a"
+alias ..="cd .."
+alias xcode="open -a Xcode "
 
-PATH="${PATH}:~/bin"
+#shell setting
+export PS1="\[\e[0;33m\][\u@ \W]\$\[\e[m\]"
 
-function desym
-{
-#$1 *.crash
-#$2 *.dSYM
-    /Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash -A -v $1 $2 | more
-}
+# mysql
+alias mysql="/usr/local/mysql/bin/mysql"
+
+#lua
+alias lua="~/Program/lua-5.3.0/src/lua"
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/chrisfnxu/Downloads/cocos2d-x-3.6/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=/Users/fragno/Program/cocos2d-x-3.5/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/chrisfnxu/Downloads/cocos2d-x-3.6/templates
+export COCOS_TEMPLATES_ROOT=/Users/fragno/Program/cocos2d-x-3.5/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH

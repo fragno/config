@@ -6,6 +6,7 @@ alias ll="ls -l"
 alias l="ls -l"
 alias la="ls -a"
 alias ..="cd .."
+alias ...="cd ../.."
 alias xcode="open -a Xcode "
 
 #shell setting

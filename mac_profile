@@ -8,6 +8,7 @@ alias la="ls -a"
 alias ..="cd .."
 alias ...="cd ../.."
 alias xcode="open -a Xcode "
+alias goout="ssh root@104.131.218.161"
 
 #shell setting
 export PS1="\[\e[0;33m\][\u@ \W]\$\[\e[m\] "

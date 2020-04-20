@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/fragno/.oh-my-zsh
 export SVN_EDITOR=vim
+export REACT_EDITOR=subl
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -54,8 +55,17 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/fragno/Program/cocos2d-x-3.5/templates:/Users/fragno/Program/cocos2d-x-3.5/tools/cocos2d-console/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/fragno/bin"
+export PATH="/Users/fragno/Program/mongodb/bin:/Users/fragno/Program/cocos2d-x-3.5/templates:/Users/fragno/Program/cocos2d-x-3.5/tools/cocos2d-console/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/fragno/bin:/Users/fragno/tool/apache-maven-3.0.5/bin:/Users/fragno/Github/WebKit/Tools/Scripts/:$PATH"
+
 # export MANPATH="/usr/local/man:$MANPATH"
+
+export MAVEN_HOME="/Users/fragno/tool/apache-maven-3.0.5"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home"
+export ANDROID_HOME="/Users/fragno/Library/Android/sdk"
+export GRADLE_HOME="/usr/local/Cellar/gradle/4.8"
+export BOOST_GRADLE_HOME="/Users/fragno/Program/boost_gradle_home"
+#export SDKROOT="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/"
+#export SDKROOT="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,6 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export EDITOR=vim
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -83,8 +94,45 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias goout="ssh root@104.131.218.161"
+alias ls="ls -G"
+alias goout="ssh root@104.199.172.121"
+alias todo="emacs -nw ~/Documents/Note/TODO.org"
+alias note="emacs -nw ~/Documents/Note/note.org"
+alias an="emacs -nw ~/Documents/Note/appx-native-gtd.org"
+alias daily="subl -o ~/Documents/Note/dailyreport.txt"
+alias plist="subl -o ~/Program/pytest/plist/plisttest.py"
+alias weekly="subl -o ~/Documents/Note/weeklyreport.md"
+alias scene="subl -o ~/Documents/Note/sceneweekly.md"
+alias recruit="emacs -nw ~/Documents/Note/interview.org"
+alias ws="wstorm"
+alias r="npm run"
+
+alias cdafw="cd ~/afwealth_ios/AFWealth"
+alias cdafw1="cd ~/Program/AliSources/afwealth_ios/AFWealth"
+alias cdrn="cd ~/Program/AliSources/afwealth-rn"
+alias cdbase="cd ~/Program/AliSources/AlipayWealth/ios_wealth_base"
+alias cdcore="cd ~/Program/AliSources/AlipayWealth/ios_wealth_core"
+alias cdthird="cd ~/Program/AliSources/AlipayWealth/ios_wealth_third"
+alias cddebug="cd ~/Program/AliSources/AlipayWealth/ios_wealth_debug"
+alias cdtiny="cd ~/Program/AliSources/Tiny"
+alias cdportal="cd ~/Program/AliSources/wealth/ios_afwealth_portal"
+alias cdlauncher="cd ~/Program/AliSources/wealth/ios_afwealth_launcher"
+alias cdwealth="cd ~/Program/AliSources/wealth/"
+alias cdwallet="cd ~/Program/AliSources/wallet/"
+alias cdnas="cd /Volumes/home/"
 
 # alias -s
-alias -s xcode="open -a Xcode"
+alias -s playground="open -a Xcode"
+alias -s xcodeproj="open -a Xcode"
+alias -s xcworkspace="open -a Xcode"
+alias -s html="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
+export NVM_DIR="/Users/fragno/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin:$HOME/Program/fluttertest/flutter/bin:$HOME/.cli"
+# export PATH="$PATH:$HOME/.vtoolkits/public" # Add vtoolkits to PATH for scripting
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH=$PATH:$JAVA_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$GRADLE_HOME/bin
